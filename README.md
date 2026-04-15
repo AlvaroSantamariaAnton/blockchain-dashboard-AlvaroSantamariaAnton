@@ -28,15 +28,15 @@ Use one of these values: `Not started`, `In progress`, `Done`
 Write 3 to 5 short lines about what you have already done.
 
 - Repository cloned from course template and structure set up.
-- README.md updated with the requested information.
-- 
-- 
+- First API call implemented in `api/blockchain_client.py` using Blockstream API.
+- Successfully fetching real Bitcoin data: block height, hash, difficulty, nonce and transaction count.
+- Observed leading zeros in block hash and related the `bits` field to the 256-bit target threshold.
 
 ## Next Step
 
 Write the next small step you will do before the next class.
 
-- Implement first api call.
+- Start M1: fetch the last N block timestamps and plot the inter-block time distribution.
 
 ## Main Problem or Blocker
 
