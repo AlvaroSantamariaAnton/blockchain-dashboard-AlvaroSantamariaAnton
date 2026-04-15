@@ -7,10 +7,10 @@ Update this README every week.
 
 | Field | Value |
 |---|---|
-| Student Name | |
-| GitHub Username | |
-| Project Title | |
-| Chosen AI Approach | |
+| Student Name | Alvaro Santamaria Anton |
+| GitHub Username | AlvaroSantamariaAnton |
+| Project Title | CryptoChain Analyzer Dashboard |
+| Chosen AI Approach | Anomaly Detector — identifies blocks with statistically abnormal inter-arrival times using an exponential distribution as baseline |
 
 ## Module Tracking
 
@@ -27,7 +27,8 @@ Use one of these values: `Not started`, `In progress`, `Done`
 
 Write 3 to 5 short lines about what you have already done.
 
-- 
+- Repository cloned from course template and structure set up.
+- README.md updated with the requested information.
 - 
 - 
 
@@ -35,7 +36,7 @@ Write 3 to 5 short lines about what you have already done.
 
 Write the next small step you will do before the next class.
 
-- 
+- Implement first api call.
 
 ## Main Problem or Blocker
 
