@@ -10,7 +10,7 @@ Update this README every week.
 | Student Name | Alvaro Santamaria Anton |
 | GitHub Username | AlvaroSantamariaAnton |
 | Project Title | CryptoChain Analyzer Dashboard |
-| Chosen AI Approach | Anomaly Detector — identifies blocks with statistically abnormal inter-arrival times using an exponential distribution as baseline |
+| Chosen AI Approach | Anomaly Detector â€” identifies blocks with statistically abnormal inter-arrival times using an exponential distribution as baseline |
 
 ## Module Tracking
 
@@ -67,3 +67,21 @@ template-blockchain-dashboard/
     |-- m3_difficulty_history.py
     `-- m4_ai_component.py
 ```
+
+<!-- student-repo-auditor:teacher-feedback:start -->
+## Teacher Feedback
+
+### Kick-off Review
+
+Review time: 2026-04-16 09:59 CEST
+Status: Green
+
+Strength:
+- Your repository keeps the expected classroom structure.
+
+Improve now:
+- The kickoff evidence is strong and aligned with the session goals.
+
+Next step:
+- Keep building on this start and prepare the next milestone.
+<!-- student-repo-auditor:teacher-feedback:end -->
