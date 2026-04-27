@@ -1,4 +1,6 @@
 requests
 pandas
+numpy
 plotly
 streamlit
+streamlit-autorefresh
