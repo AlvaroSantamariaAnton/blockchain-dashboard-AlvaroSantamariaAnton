@@ -10,7 +10,7 @@ Update this README every week.
 | Student Name | Alvaro Santamaria Anton |
 | GitHub Username | AlvaroSantamariaAnton |
 | Project Title | CryptoChain Analyzer Dashboard |
-| Chosen AI Approach | Anomaly Detector â€” identifies blocks with statistically abnormal inter-arrival times using an exponential distribution as baseline |
+| Chosen AI Approach | Anomaly Detector — identifies blocks with statistically abnormal inter-arrival times using an exponential distribution as baseline |
 
 ## Module Tracking
 
@@ -18,25 +18,26 @@ Use one of these values: `Not started`, `In progress`, `Done`
 
 | Module | What it should include | Status |
 |---|---|---|
-| M1 | Proof of Work Monitor | Not started |
-| M2 | Block Header Analyzer | Not started |
-| M3 | Difficulty History | Not started |
-| M4 | AI Component | Not started |
+| M1 | Proof of Work Monitor | Done |
+| M2 | Block Header Analyzer | Done |
+| M3 | Difficulty History | In progress |
+| M4 | AI Component | Not started (approach decided) |
 
 ## Current Progress
 
 Write 3 to 5 short lines about what you have already done.
 
-- Repository cloned from course template and structure set up.
-- First API call implemented in `api/blockchain_client.py` using Blockstream API.
-- Successfully fetching real Bitcoin data: block height, hash, difficulty, nonce and transaction count.
-- Observed leading zeros in block hash and related the `bits` field to the 256-bit target threshold.
+- **M1 done:** live difficulty, target-threshold visualisation in the 256-bit space, hash-rate estimate, and inter-block-time histogram with the theoretical Exp(mean = 600 s) curve overlaid.
+- **M2 done:** raw 80-byte header parsed into its 6 little-endian fields and SHA-256(SHA-256(header)) computed with `hashlib`; the result matches the reported block hash and is verified to be below the target decoded from `bits`.
+- **M3 in progress:** difficulty history is plotted with selectable time window; adjustment-event markers and actual-vs-target ratio per 2016-block period are pending.
+- API client uses Blockstream (raw headers, recent blocks, chain tip) with a fallback path that builds the difficulty series directly from Blockstream when blockchain.info is unavailable.
+- Dashboard refreshes automatically every 60 s (rubric criterion C3).
 
 ## Next Step
 
 Write the next small step you will do before the next class.
 
-- Start M1: fetch the last N block timestamps and plot the inter-block time distribution.
+- Finish M3: add difficulty-adjustment markers and the actual-vs-target block-time ratio per 2016-block period.
 
 ## Main Problem or Blocker
 
