@@ -15,7 +15,7 @@ import streamlit as st
 from api.blockchain_client import get_difficulty_history
 
 
-@st.cache_data(ttl=3600, show_spinner=False)  # difficulty changes only every ~2 weeks
+@st.cache_data(ttl=43_200, show_spinner="Loading difficulty history...")
 def _load_history(timespan: str) -> pd.DataFrame:
     values = get_difficulty_history(timespan)
     df = pd.DataFrame(values)
@@ -26,17 +26,16 @@ def _load_history(timespan: str) -> pd.DataFrame:
 
 
 def render() -> None:
-    """Render the M3 panel."""
     st.header("M3 — Difficulty History")
     st.caption(
         "Long-term evolution of the Bitcoin mining difficulty. "
-        "Source: blockchain.info /charts/difficulty."
+        "Source: mempool.space /api/v1/mining/hashrate."
     )
 
     timespan = st.selectbox(
         "Time window",
-        options=["1year", "2years", "5years", "all"],
-        index=1,
+        options=["1m", "3m", "6m", "1y", "2y", "3y"],
+        index=4,  # default to 2y
         key="m3_timespan",
     )
 
@@ -51,9 +50,7 @@ def render() -> None:
         return
 
     fig = px.line(
-        df,
-        x="Date",
-        y="Difficulty",
+        df, x="Date", y="Difficulty",
         title=f"Bitcoin mining difficulty — {timespan}",
     )
     fig.update_yaxes(title="Difficulty (dimensionless)")

@@ -28,12 +28,12 @@ def _bits_to_target(bits: int) -> int:
     return mantissa * (2 ** (8 * (exponent - 3)))
 
 
-@st.cache_data(ttl=60, show_spinner=False)
+@st.cache_data(ttl=300, show_spinner=False)
 def _load_tip_block() -> dict:
     return get_block(get_tip_hash())
 
 
-@st.cache_data(ttl=60, show_spinner=False)
+@st.cache_data(ttl=300, show_spinner=False)
 def _load_recent_blocks(n: int) -> list[dict]:
     return get_last_n_blocks(n)
 

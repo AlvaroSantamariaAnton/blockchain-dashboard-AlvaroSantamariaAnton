@@ -56,7 +56,7 @@ def _parse_header(header_hex: str) -> dict:
     }
 
 
-@st.cache_data(ttl=60, show_spinner=False)
+@st.cache_data(ttl=300, show_spinner=False)
 def _load_tip_hash() -> str:
     return get_tip_hash()
 
