@@ -22,6 +22,7 @@ Use one of these values: `Not started`, `In progress`, `Done`
 | M2 | Block Header Analyzer | Done |
 | M3 | Difficulty History | Done |
 | M4 | AI Component | Done |
+| M6 | Security Score (optional) | Done |
 
 ## Current Progress
 
@@ -31,13 +32,13 @@ Write 3 to 5 short lines about what you have already done.
 - **M2 done:** raw 80-byte header parsed into its 6 little-endian fields and SHA-256(SHA-256(header)) computed with `hashlib`; the result matches the reported block hash and is verified to be below the target decoded from `bits`.
 - **M3 done:** difficulty history with one marker per 2016-block retarget plus a second chart showing the actual-vs-target block-time ratio per epoch (red = slower than target, green = faster).
 - **M4 done:** anomaly detector with score `S(Δt) = exp(-Δt / μ)`, flagged-blocks table, fitted exponential overlay on the histogram, and two-pronged evaluation — Kolmogorov-Smirnov goodness-of-fit (D statistic + asymptotic p-value) and a calibration curve comparing nominal α with empirical false-positive rate.
-- API client uses Blockstream (raw headers, recent blocks, chain tip) and mempool.space (difficulty history). Dashboard refreshes automatically every 60 s (rubric criterion C3).
+- **M6 done (optional):** 51% attack cost calculator from live hashrate data with configurable electricity price and ASIC efficiency, plus the attack-success probability vs confirmation depth curve from Nakamoto 2008 §11.
 
 ## Next Step
 
 Write the next small step you will do before the next class.
 
-- Pick one optional module (M5 Merkle Proof Verifier, M6 Security Score, or M7 second AI approach) to push beyond the required core for the final delivery on May 14.
+- Write the final PDF report (2-3 pages): cryptographic metrics explained, AI model choice and evaluation results, and at least one external reference (Nakamoto whitepaper).
 
 ## Main Problem or Blocker
 
@@ -66,7 +67,8 @@ template-blockchain-dashboard/
     |-- m1_pow_monitor.py
     |-- m2_block_header.py
     |-- m3_difficulty_history.py
-    `-- m4_ai_component.py
+    |-- m4_ai_component.py
+    `-- m6_security_score.py
 ```
 
 <!-- student-repo-auditor:teacher-feedback:start -->
