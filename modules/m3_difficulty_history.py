@@ -22,7 +22,6 @@ from api.blockchain_client import get_difficulty_history
 
 TARGET_BLOCK_TIME_S = 600          # Bitcoin protocol target — 10 minutes per block
 BLOCKS_PER_EPOCH = 2016            # Difficulty re-targets every 2016 blocks
-TARGET_EPOCH_TIME_S = TARGET_BLOCK_TIME_S * BLOCKS_PER_EPOCH  # ≈ 14 days
 
 
 @st.cache_data(ttl=43_200, show_spinner="Loading difficulty history...")

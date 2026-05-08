@@ -20,6 +20,16 @@ st.caption(
     "Live cryptographic metrics from the Bitcoin network · auto-refresh every 60 s"
 )
 
+with st.expander("ℹ About this project", expanded=False):
+    st.markdown(
+        "Final project for the **Cryptography** course at UAX (2025/26). "
+        "Real-time dashboard exploring the cryptographic mechanics of Bitcoin: "
+        "Proof of Work, block-header parsing and verification, difficulty "
+        "history, an exponential-baseline anomaly detector for inter-block "
+        "times, and a 51%-attack security calculator (Nakamoto 2008 §11). "
+        "Author: Alvaro Santamaria Anton (UAX)."
+    )
+
 tab1, tab2, tab3, tab4, tab6 = st.tabs(
     [
         "M1 · PoW Monitor",
