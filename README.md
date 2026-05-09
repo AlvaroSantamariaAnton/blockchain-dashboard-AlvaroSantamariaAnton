@@ -33,12 +33,13 @@ Write 3 to 5 short lines about what you have already done.
 - **M3 done:** difficulty history with one marker per 2016-block retarget plus a second chart showing the actual-vs-target block-time ratio per epoch (red = slower than target, green = faster).
 - **M4 done:** anomaly detector with score `S(Δt) = exp(-Δt / μ)`, flagged-blocks table, fitted exponential overlay on the histogram, and two-pronged evaluation — Kolmogorov-Smirnov goodness-of-fit (D statistic + asymptotic p-value) and a calibration curve comparing nominal α with empirical false-positive rate.
 - **M6 done (optional):** 51% attack cost calculator from live hashrate data with configurable electricity price and ASIC efficiency, plus the attack-success probability vs confirmation depth curve from Nakamoto 2008 §11.
+- **Report done:** 3-page PDF covering cryptographic metrics and their meaning, AI model choice and evaluation results, and 5 external references including the Nakamoto whitepaper.
 
 ## Next Step
 
 Write the next small step you will do before the next class.
 
-- Write the final PDF report (2-3 pages): cryptographic metrics explained, AI model choice and evaluation results, and at least one external reference (Nakamoto whitepaper).
+- Project complete.
 
 ## Main Problem or Blocker
 
@@ -56,19 +57,21 @@ streamlit run app.py
 ## Project Structure
 
 ```text
-template-blockchain-dashboard/
+blockchain-dashboard-AlvaroSantamariaAnton/
 |-- README.md
 |-- requirements.txt
 |-- .gitignore
 |-- app.py
 |-- api/
 |   `-- blockchain_client.py
-`-- modules/
-    |-- m1_pow_monitor.py
-    |-- m2_block_header.py
-    |-- m3_difficulty_history.py
-    |-- m4_ai_component.py
-    `-- m6_security_score.py
+|-- modules/
+|   |-- m1_pow_monitor.py
+|   |-- m2_block_header.py
+|   |-- m3_difficulty_history.py
+|   |-- m4_ai_component.py
+|   `-- m6_security_score.py
+`-- reports/
+    `-- CryptoChain_Analyzer_Final_Report.pdf
 ```
 
 <!-- student-repo-auditor:teacher-feedback:start -->
